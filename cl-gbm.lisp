@@ -1,6 +1,7 @@
 (in-package :gbm)
 
 (define-foreign-library libgbm
+  (:unix (:or "/usr/lib64/libgbm.so.1" "/usr/lib64/libgbm.so.0" "/usr/lib64/libgbm.so"))
   (t (:default "libgbm")))
 
 (use-foreign-library libgbm)
